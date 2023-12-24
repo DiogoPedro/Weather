@@ -1,0 +1,37 @@
+@import '../../sass/variables';
+@import '../../sass/mixins';
+
+.HomePage
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: $background-primary-color;
+
+    & > .title{
+        color: $color-sub-primary;
+        font-size: 24px;
+        font-weight: 400;
+        letter-spacing: 2px;
+    }
+
+    & > .subtitle{
+        color: $color-sub-primary;
+        font-size: 20px;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+    }
+
+    & > .cities-wrapper{
+
+        & > .city{
+            color: $color-sub-primary;
+            font-size: 18px;
+            font-weight: 300;
+        }
+    
+    }
+}
