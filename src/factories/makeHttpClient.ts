@@ -9,7 +9,7 @@ type ServiceType = "current" | "hourly";
 //Factory method pattern
 export function makeHttpClient<T>(serviceType: ServiceType): IHttpClient<T> {
 
-    switch(serviceType){
+    switch (serviceType) {
         case "current": return new AxiosHttpClientImpl<T>(currentWeatherAxiosInstance);
         case "hourly": return new AxiosHttpClientImpl<T>(hourlyWeatherAxiosInstance);
     }

@@ -6,29 +6,58 @@
   background: linear-gradient(rgb(97, 105, 120), rgb(60, 67, 83));
 }
 
-.WeatherPage[weather=cloudy-day], .WeatherPage[weather=cloudy-night] {
+.WeatherPage[weather=cloudy-day],
+.WeatherPage[weather=cloudy-night] {
   background: linear-gradient(rgb(69, 79, 97), rgb(49, 60, 87));
 }
 
-.WeatherPage[weather=sunny] .Icon, .WeatherPage[weather=rainy] .Icon, .WeatherPage[weather=cloudy-day] .Icon, .WeatherPage[weather=cloudy-night] .Icon, .WeatherPage .Icon {
+.WeatherPage[weather=sunny] .Icon,
+.WeatherPage[weather=rainy] .Icon,
+.WeatherPage[weather=cloudy-day] .Icon,
+.WeatherPage[weather=cloudy-night] .Icon,
+.WeatherPage .Icon {
   color: #ffffff;
 }
-.WeatherPage[weather=sunny] .Icon:hover, .WeatherPage[weather=rainy] .Icon:hover, .WeatherPage[weather=cloudy-day] .Icon:hover, .WeatherPage[weather=cloudy-night] .Icon:hover, .WeatherPage .Icon:hover {
+.WeatherPage[weather=sunny] .Icon:hover,
+.WeatherPage[weather=rainy] .Icon:hover,
+.WeatherPage[weather=cloudy-day] .Icon:hover,
+.WeatherPage[weather=cloudy-night] .Icon:hover,
+.WeatherPage .Icon:hover {
   color: rgba(255, 255, 255, 0.8);
 }
-.WeatherPage[weather=sunny] .Icon-bright, .WeatherPage[weather=rainy] .Icon-bright, .WeatherPage[weather=cloudy-day] .Icon-bright, .WeatherPage[weather=cloudy-night] .Icon-bright, .WeatherPage .Icon-bright {
+.WeatherPage[weather=sunny] .Icon-bright,
+.WeatherPage[weather=rainy] .Icon-bright,
+.WeatherPage[weather=cloudy-day] .Icon-bright,
+.WeatherPage[weather=cloudy-night] .Icon-bright,
+.WeatherPage .Icon-bright {
   color: rgba(255, 255, 255, 0.8);
 }
-.WeatherPage[weather=sunny] .Icon-brighter, .WeatherPage[weather=rainy] .Icon-brighter, .WeatherPage[weather=cloudy-day] .Icon-brighter, .WeatherPage[weather=cloudy-night] .Icon-brighter, .WeatherPage .Icon-brighter {
+.WeatherPage[weather=sunny] .Icon-brighter,
+.WeatherPage[weather=rainy] .Icon-brighter,
+.WeatherPage[weather=cloudy-day] .Icon-brighter,
+.WeatherPage[weather=cloudy-night] .Icon-brighter,
+.WeatherPage .Icon-brighter {
   color: rgba(255, 255, 255, 0.5);
 }
-.WeatherPage[weather=sunny] .Text, .WeatherPage[weather=rainy] .Text, .WeatherPage[weather=cloudy-day] .Text, .WeatherPage[weather=cloudy-night] .Text, .WeatherPage .Text {
+.WeatherPage[weather=sunny] .Text,
+.WeatherPage[weather=rainy] .Text,
+.WeatherPage[weather=cloudy-day] .Text,
+.WeatherPage[weather=cloudy-night] .Text,
+.WeatherPage .Text {
   color: #ffffff;
 }
-.WeatherPage[weather=sunny] .Text-bright, .WeatherPage[weather=rainy] .Text-bright, .WeatherPage[weather=cloudy-day] .Text-bright, .WeatherPage[weather=cloudy-night] .Text-bright, .WeatherPage .Text-bright {
+.WeatherPage[weather=sunny] .Text-bright,
+.WeatherPage[weather=rainy] .Text-bright,
+.WeatherPage[weather=cloudy-day] .Text-bright,
+.WeatherPage[weather=cloudy-night] .Text-bright,
+.WeatherPage .Text-bright {
   color: rgba(255, 255, 255, 0.8);
 }
-.WeatherPage[weather=sunny] .Text-brighter, .WeatherPage[weather=rainy] .Text-brighter, .WeatherPage[weather=cloudy-day] .Text-brighter, .WeatherPage[weather=cloudy-night] .Text-brighter, .WeatherPage .Text-brighter {
+.WeatherPage[weather=sunny] .Text-brighter,
+.WeatherPage[weather=rainy] .Text-brighter,
+.WeatherPage[weather=cloudy-day] .Text-brighter,
+.WeatherPage[weather=cloudy-night] .Text-brighter,
+.WeatherPage .Text-brighter {
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -95,7 +124,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 48px;
+  padding: 48px 8px;
   width: 100%;
   max-width: 420px;
 }

@@ -6,12 +6,12 @@ export default function searchNextDayWeather(response: HourlyWeatherResponse, ho
 
     nextDay.setTime(nextDay.getTime() + 86400000); //next day
     nextDay.setHours(hours, 0, 0);
-    
+
     const dateHoursString = nextDay.toLocaleTimeString();
-    const nextDayString = nextDay.getFullYear() + "-" 
-        + (((nextDay.getMonth()+1)<10) ? "0"+(nextDay.getMonth()+1) : (nextDay.getMonth()+1)) + "-"
-        + ((nextDay.getDate()<10) ? "0"+nextDay.getDate() : nextDay.getDate()) + " "
+    const nextDayString = nextDay.getFullYear() + "-"
+        + (((nextDay.getMonth() + 1) < 10) ? "0" + (nextDay.getMonth() + 1) : (nextDay.getMonth() + 1)) + "-"
+        + ((nextDay.getDate() < 10) ? "0" + nextDay.getDate() : nextDay.getDate()) + " "
         + dateHoursString;
 
-    return (response.list.filter(data => data.dt_txt === nextDayString)[0].main.temp - 273).toFixed(0);
+    return (response.list.filter(data => data.dt_txt === nextDayString)[0]?.main.temp - 273).toFixed(0);
 }

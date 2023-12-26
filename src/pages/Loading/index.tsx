@@ -2,9 +2,9 @@ import './styles.css';
 
 import PuffLoader from "react-spinners/PuffLoader";
 
-export default function Loading() : JSX.Element {
+export default function Loading(): JSX.Element {
 
-    return(
+    return (
         <div className='LoadingPage'>
             <PuffLoader
                 className='Loader'

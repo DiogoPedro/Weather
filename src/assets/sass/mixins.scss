@@ -1,28 +1,28 @@
-@mixin mq-very-small {
+@mixin mq-very-small{
     @media only screen and (max-width: 340px) {
         @content;
     }
 }
 
-@mixin mq-small {
+@mixin mq-small{
     @media only screen and (max-width: 576px) {
         @content;
     }
 }
 
-@mixin mq-medium {
+@mixin mq-medium{
     @media only screen and (max-width: 720px) {
         @content;
     }
 }
 
-@mixin mq-large {
+@mixin mq-large{
     @media only screen and (max-width: 956px) {
         @content;
     }
 }
 
-@mixin no-motion {
+@mixin no-motion{
     @media (prefers-reduced-motion: reduce) {
         @content;
     }

@@ -1,73 +1,86 @@
 @import '../../assets/sass/mixins';
 @import '../../assets/sass/variables';
 
-.WeatherPage[weather="sunny"]{
+.WeatherPage[weather="sunny"] {
     background: linear-gradient(rgb(87, 203, 220), rgb(59, 161, 181));
 }
 
-.WeatherPage[weather="rainy"]{
+.WeatherPage[weather="rainy"] {
     background: linear-gradient(rgb(97, 105, 120), rgb(60, 67, 83));
 }
 
-.WeatherPage[weather="cloudy-day"], .WeatherPage[weather="cloudy-night"]{
+.WeatherPage[weather="cloudy-day"],
+.WeatherPage[weather="cloudy-night"] {
     background: linear-gradient(rgb(69, 79, 97), rgb(49, 60, 87));
 }
 
-.WeatherPage[weather="sunny"], .WeatherPage[weather="rainy"], .WeatherPage[weather="cloudy-day"], .WeatherPage[weather="cloudy-night"], .WeatherPage{
-    .Icon{
+.WeatherPage[weather="sunny"],
+.WeatherPage[weather="rainy"],
+.WeatherPage[weather="cloudy-day"],
+.WeatherPage[weather="cloudy-night"],
+.WeatherPage {
+    .Icon {
         color: #ffffff;
 
-        &:hover{
-            color: rgba(255,255,255,0.8);
+        &:hover {
+            color: rgba(255, 255, 255, 0.8);
         }
     }
-    .Icon-bright{
-        color: rgba(255,255,255,0.8);
-    }
-    .Icon-brighter{
-        color: rgba(255,255,255,0.5);
+
+    .Icon-bright {
+        color: rgba(255, 255, 255, 0.8);
     }
 
-    .Text{
+    .Icon-brighter {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .Text {
         color: #ffffff;
     }
-    .Text-bright{
-        color: rgba(255,255,255,0.8);
+
+    .Text-bright {
+        color: rgba(255, 255, 255, 0.8);
     }
-    .Text-brighter{
-        color: rgba(255,255,255,0.5);
+
+    .Text-brighter {
+        color: rgba(255, 255, 255, 0.5);
     }
 }
 
-.WeatherPage[weather="snowy"]{
+.WeatherPage[weather="snowy"] {
     background: linear-gradient(rgb(224, 224, 224), rgb(165, 165, 165));
 
-    .Icon{
+    .Icon {
         color: #000000;
 
-        &:hover{
-            color: rgba(0,0,0,0.8);
+        &:hover {
+            color: rgba(0, 0, 0, 0.8);
         }
     }
-    .Icon-bright{
-        color: rgba(0,0,0,0.8);
-    }
-    .Icon-brighter{
-        color: rgba(0,0,0,0.5);
+
+    .Icon-bright {
+        color: rgba(0, 0, 0, 0.8);
     }
 
-    .Text{
+    .Icon-brighter {
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    .Text {
         color: #000000;
     }
-    .Text-bright{
-        color: rgba(0,0,0,0.8);
+
+    .Text-bright {
+        color: rgba(0, 0, 0, 0.8);
     }
-    .Text-brighter{
-        color: rgba(0,0,0,0.5);
+
+    .Text-brighter {
+        color: rgba(0, 0, 0, 0.5);
     }
 }
 
-.WeatherPage{
+.WeatherPage {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -79,90 +92,90 @@
     min-height: 100vh;
     padding: 24px;
 
-    > .Back-bar{
+    >.Back-bar {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         width: 100%;
 
-        > .Rounded{
+        >.Rounded {
             border-radius: 50%;
             padding: 4px;
 
-            &:hover{
+            &:hover {
                 cursor: pointer;
                 transition: background-color 300ms;
-                background-color: rgba(0,0,0,0.08);
+                background-color: rgba(0, 0, 0, 0.08);
             }
 
-            > .Back-icon{
+            >.Back-icon {
                 width: 32px;
                 height: auto;
-    
-                &:hover{
+
+                &:hover {
                     transition: color 300ms;
                 }
             }
         }
-        
+
     }
 
-    > .Weather-container {
+    >.Weather-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 48px;
+        padding: 48px 8px;
         width: 100%;
         max-width: 420px;
 
-        > .Title-wrapper {
+        >.Title-wrapper {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
             line-height: 1;
 
-            .Title{
+            .Title {
                 font-size: 34px;
                 font-weight: 300;
                 letter-spacing: 4px;
             }
 
-            .Subtitle{
+            .Subtitle {
                 font-size: 28px;
                 font-weight: 200;
             }
         }
 
-        > .Today-temperature {
+        >.Today-temperature {
             display: flex;
             justify-content: center;
             align-items: center;
 
-            > .Temperature {
+            >.Temperature {
                 font-size: 106px;
                 font-weight: 300;
 
-                ::first-letter{
+                ::first-letter {
                     letter-spacing: 6px;
                 }
             }
 
-            > .Temperature-complement {
+            >.Temperature-complement {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: flex-end;
                 height: 84px;
 
-                > .Measure{
+                >.Measure {
                     font-size: 24px;
                     font-weight: 400;
                     letter-spacing: 4px;
                     position: relative;
 
-                    i{
+                    i {
                         position: absolute;
                         left: -8px;
                         font-size: 14px;
@@ -170,13 +183,13 @@
                     }
                 }
 
-                > .Max-min-temperature{
+                >.Max-min-temperature {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    
-                    > .Temperature-plus-arrow{
+
+                    >.Temperature-plus-arrow {
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -194,14 +207,14 @@
                     }
                 }
             }
-        }   
+        }
 
-        > .Weather-icon {
+        >.Weather-icon {
             width: 106px;
             height: auto;
         }
 
-        > .Previsions {
+        >.Previsions {
             margin: 48px 0;
 
             display: flex;
@@ -212,7 +225,7 @@
             flex-wrap: wrap;
             gap: 12px;
 
-            @include mq-very-small{
+            @include mq-very-small {
                 justify-content: center;
                 gap: 16px;
             }
@@ -224,25 +237,25 @@
                 align-items: center;
                 gap: 8px;
 
-                .Title{
+                .Title {
                     font-size: 16px;
                     font-weight: 300;
                     letter-spacing: 1px;
                 }
 
-                .Weather-icon{
+                .Weather-icon {
                     width: 36px;
                     height: auto;
                     margin-bottom: 8px;
                 }
 
-                .Temperature{
+                .Temperature {
                     font-size: 18px;
                     font-weight: 300;
                     letter-spacing: 1.5px;
                     position: relative;
 
-                    i{
+                    i {
                         position: absolute;
                         left: -8px;
                         font-size: 14px;
@@ -250,14 +263,14 @@
                     }
                 }
 
-                .Measure{
+                .Measure {
                     font-size: 18px;
                     font-weight: 300;
                     letter-spacing: 1.5px;
                     position: relative;
                     margin-left: 8px;
 
-                    i{
+                    i {
                         position: absolute;
                         left: -8px;
                         font-size: 11px;
@@ -267,7 +280,7 @@
             }
         }
 
-        > .More-infos {
+        >.More-infos {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -276,30 +289,30 @@
             flex-wrap: wrap;
             gap: 12px;
 
-            @include mq-very-small{
+            @include mq-very-small {
                 justify-content: center;
                 gap: 16px;
             }
 
-            > .Wrapper {
+            >.Wrapper {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 gap: 8px;
 
-                .Title{
+                .Title {
                     font-size: 16px;
                     font-weight: 200;
                     letter-spacing: 1px;
                 }
 
-                .Value{
+                .Value {
                     font-size: 14px;
                     font-weight: 300;
                     letter-spacing: 0.5px;
                 }
             }
-        }   
+        }
     }
 }

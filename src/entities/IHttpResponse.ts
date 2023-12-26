@@ -1,4 +1,4 @@
-export interface IHttpResponse<T> {
+export interface IHttpResponse<T>{
     message: string,
     data: T | null
 }

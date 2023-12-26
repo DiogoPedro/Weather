@@ -6,31 +6,31 @@ const WeatherPage = lazy(() => import('@pages/Weather'));
 const NotFoundPage = lazy(() => import('@pages/NotFound'));
 
 import {
-	createBrowserRouter,
-	RouterProvider
+    createBrowserRouter,
+    RouterProvider
 } from "react-router-dom";
 
 
 function Router() {
 
     return (
-        <Suspense fallback={<LoadingPage/>}>
+        <Suspense fallback={<LoadingPage />}>
             <RouterProvider router={
                 createBrowserRouter([
                     {
                         path: "/",
-                        element: <HomePage/>,
+                        element: <HomePage />,
                     },
                     {
                         path: "/weather",
-                        element: <WeatherPage/>,
+                        element: <WeatherPage />,
                     },
                     {
                         path: "*",
-                        element: <NotFoundPage/>,
+                        element: <NotFoundPage />,
                     }
                 ])
-            }/> 
+            } />
         </Suspense>
     );
 }
