@@ -1,20 +1,18 @@
 import './styles.css';
 
-import DotLoader from "react-spinners/DotLoader";
+import PuffLoader from "react-spinners/PuffLoader";
 
 export default function Loading() : JSX.Element {
 
     return(
         <div className='LoadingPage'>
-
-            <DotLoader
+            <PuffLoader
                 className='Loader'
-                color="rgb(229,9,20)"
+                color="rgb(255,255,255)"
                 size={70}
                 aria-label="Loading Spinner"
                 data-testid="loader"
             />
-
         </div>
     );
 

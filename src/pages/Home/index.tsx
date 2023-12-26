@@ -1,29 +1,45 @@
 import './styles.css';
-import earthLogo from '@assets/earth.svg';
+import earthLogo from '@assets/imgs/earth.png';
+import { motion } from 'framer-motion';
 
 import { useNavigate } from 'react-router-dom';
 
 export default function HomePage(): JSX.Element {
-    const navigate = useNavigate();
 
-    const goToWeatherPage = (event: React.MouseEvent<HTMLDivElement>) => navigate({
-      pathname: '/weather',
-      search: '?city=' + (event.target as HTMLDivElement)?.innerText.toLowerCase(),
-    });
-    
-    return (
-        <main className="HomePage">
-            <h1 className="title">WEATHER</h1>
-            <h2 className="subtitle">select a city</h2>
-            <img src={earthLogo} style={{width: "35vw", height: "35vh"}}/>
-            <div className="cities-wrapper">
-                <div className="city" onClick={goToWeatherPage}>Dallol</div>
-                <div className="city" onClick={goToWeatherPage}>Fairbanks</div>
-                <div className="city" onClick={goToWeatherPage}>London</div>
-                <div className="city" onClick={goToWeatherPage}>Recife</div>
-                <div className="city" onClick={goToWeatherPage}>Vancouve</div>
-                <div className="city" onClick={goToWeatherPage}>Yakutsk</div>
-            </div>
-        </main>
-    );
+	const navigate = useNavigate();
+
+	const goToWeatherPage = (event: React.MouseEvent<HTMLDivElement>) => {
+		navigate({
+			pathname: '/weather',
+			search: '?city=' + (event.target as HTMLDivElement).innerText.toLowerCase(),
+		});
+	};
+
+	return (
+		<main className='HomePage'>
+
+			<motion.article 
+				className='HomePage-container'
+				initial={{ x: -(window.innerWidth/2), opacity: 0}}
+				animate={{x: 0, opacity: 1, transition:{type: "easeIn", duration: 0.6}}}
+			>	
+				<div className='Title-wrapper'>
+					<h1 className='Title'>WEATHER</h1>
+					<h1 className='Subtitle'>select a city</h1>
+				</div>
+
+				<img src={earthLogo} className='Logo' />
+
+				<div className='Cities-wrapper'>
+					<div className='City' onClick={goToWeatherPage}>Dallol</div>
+					<div className='City' onClick={goToWeatherPage}>Fairbanks</div>
+					<div className='City' onClick={goToWeatherPage}>London</div>
+					<div className='City' onClick={goToWeatherPage}>Recife</div>
+					<div className='City' onClick={goToWeatherPage}>Vancouver</div>
+					<div className='City' onClick={goToWeatherPage}>Yakutsk</div>
+				</div>
+			</motion.article>
+
+		</main>
+	);
 }
