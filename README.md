@@ -11,9 +11,13 @@ In the root folder run the commands:
 ```
 
 then access:
-**[link](http://localhost:80)**
+**[http://localhost:80](http://localhost:80)**
+
 
 to stop docker container run:
 ```
   docker stop weather_app_container
 ```
+
+Access for netlify:
+**[link](https://weather-dpfs.netlify.app/)**
