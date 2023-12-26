@@ -49,7 +49,7 @@ export default function WeatherPage(): JSX.Element {
             case "snowy": return <BsCloudSnow className='Weather-icon Icon' data-testid='current-weather-snowy' />
             case "cloudy-day": return <WiDayCloudy className='Weather-icon Icon' data-testid='current-weather-cloudy-day' />
             case "cloudy-night": return <IoCloudyNightOutline className='Weather-icon Icon' data-testid='current-weather-cloudy-night' />
-            case "fog" : return <BsCloudFog2 className='Weather-icon Icon' data-testid='current-weather-fog' />
+            case "fog": return <BsCloudFog2 className='Weather-icon Icon' data-testid='current-weather-fog' />
             case "thundery": return <BsCloudLightningRain className='Weather-icon Icon' data-testid='current-weather-thundery' />
             default: return <RiQuestionMark className='Weather-icon Icon' data-testid='current-weather-unknown' />
         }
@@ -93,7 +93,9 @@ export default function WeatherPage(): JSX.Element {
                     <h2 className='Subtitle Text-bright' data-testid="page-subtitle">{weather ? rewriteWeatherType(weather) : "unknown"}</h2>
                 </div>
 
-                {getCurrentWeatherResult && getCurrentWeatherResult.data &&
+                {getCurrentWeatherResult && getCurrentWeatherResult.data && (getCurrentWeatherResult.data.main?.temp !== undefined) &&
+                    (getCurrentWeatherResult.data.main?.temp_max !== undefined) &&
+                    (getCurrentWeatherResult.data.main?.temp_min !== undefined) &&
                     <div className='Today-temperature Text'>
                         <span className='Temperature' data-testid="current-temperature">{(getCurrentWeatherResult.data.main.temp - 273).toFixed(1)}</span>
                         <div className='Temperature-complement'>

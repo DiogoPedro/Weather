@@ -1,6 +1,6 @@
 import HourlyWeatherResponse from "@entities/HourlyWeatherResponse";
 
-export default function searchNextDayWeather(response: HourlyWeatherResponse, hours: number) {
+export default function searchNextDayTemperature(response: HourlyWeatherResponse, hours: number) {
 
     const nextDay = new Date();
 
@@ -13,5 +13,6 @@ export default function searchNextDayWeather(response: HourlyWeatherResponse, ho
         + ((nextDay.getDate() < 10) ? "0" + nextDay.getDate() : nextDay.getDate()) + " "
         + dateHoursString;
 
+    if (response == undefined) return 0;
     return (response.list.filter(data => data.dt_txt === nextDayString)[0]?.main.temp - 273).toFixed(0);
 }

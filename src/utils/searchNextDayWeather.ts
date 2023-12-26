@@ -14,7 +14,8 @@ export default function searchNextDayWeather(response: HourlyWeatherResponse, ho
         + ((nextDay.getDate() < 10) ? "0" + nextDay.getDate() : nextDay.getDate()) + " "
         + dateHoursString;
 
-    const weather = response.list.filter(data => data.dt_txt === nextDayString)[0]?.weather[0].main;
+    if (response == undefined) return "unknown";
 
+    const weather = response.list.filter(data => data.dt_txt === nextDayString)[0]?.weather[0].main;
     return getWeatherType(weather, nextDay);
 }
